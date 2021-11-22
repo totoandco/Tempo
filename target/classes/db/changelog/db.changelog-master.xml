@@ -1,0 +1,28 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <changeSet author="Tempo" id="extensions">
+        <sqlFile path="db/changelog/scripts.baseline.v1/extensions.sql" />
+    </changeSet>
+
+    <changeSet author="Tempo" id="roles">
+        <sqlFile path="db/changelog/scripts.baseline.v1/roles.sql" />
+    </changeSet>
+
+    <changeSet author="Tempo" id="members">
+        <sqlFile path="db/changelog/scripts.baseline.v1/members.sql" />
+    </changeSet>
+
+    <changeSet author="Tempo" id="initial values">
+        <sqlFile path="db/changelog/scripts.baseline.v1/initial_values.sql" />
+    </changeSet>
+
+    <!-- Schema was successfully created. Tag it as v1.0.0 -->
+    <changeSet author="Tempo" id="1.0.0-99">
+        <tagDatabase tag="v1.0.0" />
+    </changeSet>
+</databaseChangeLog>

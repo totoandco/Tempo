@@ -1,0 +1,27 @@
+
+springdoc:
+  swagger-ui:
+    path: swagger-ui.html
+  api-docs:
+    path: /openapi
+spring:
+  liquibase:
+    change-log: classpath:db/changelog/db.changelog-master.xml
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/tempo
+    username: postgres
+    password: postgres
+    hikari:
+      connectionTimeout: 30000
+      initializationFailTimeout: 30000
+  jpa:
+  properties:
+    hibernate:
+      dialect: org.hibernate.dialect.PostgreSQL95Dialect
+      ddl-auto: none
+      open-in-view: true
+
+external-endpoints:
+  users: https://cgjresszgg.execute-api.eu-west-1.amazonaws.com/users/
+  teams: https://cgjresszgg.execute-api.eu-west-1.amazonaws.com/teams/
